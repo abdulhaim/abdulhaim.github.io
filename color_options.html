@@ -1,0 +1,90 @@
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root { --f: Inter, "Helvetica Neue", Arial, sans-serif; }
+  body { margin: 0; font-family: var(--f); }
+  .intro { padding: 22px 26px 6px; color: #333; }
+  .intro h1 { font-size: 17px; font-weight: 600; margin: 0 0 4px; letter-spacing: 1px; }
+  .intro p { font-size: 13px; color: #666; margin: 0; max-width: 640px; line-height: 1.5; }
+  .opt { padding: 26px; border-top: 1px solid #eee; }
+  .opt-label { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 600; margin-bottom: 4px; }
+  .opt-note { font-size: 12px; color: #888; margin-bottom: 18px; }
+  .demo { display: grid; grid-template-columns: 150px 1fr; gap: 26px; border-radius: 10px; padding: 20px 22px; }
+  .side .name { font-size: 13px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; }
+  .side .email { font-size: 10px; margin: 3px 0 14px; }
+  .side .lnk { font-size: 10px; line-height: 22px; }
+  .side .lnk a { text-decoration: none; }
+  .tabs { display: flex; gap: 7px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab { font-size: 10px; letter-spacing: .4px; border-radius: 16px; padding: 4px 12px; border: none; }
+  .card { display: grid; grid-template-columns: 96px 1fr; gap: 16px; align-items: start; }
+  .card .thumb { width: 96px; height: 62px; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 9px; }
+  .ttl { font-size: 13px; font-weight: 600; line-height: 1.35; }
+  .badge { font-size: 9px; padding: 2px 7px; border-radius: 8px; margin-left: 6px; white-space: nowrap; }
+  .auth { font-size: 11px; margin: 4px 0 1px; }
+  .auth a { text-decoration: none; }
+  .ven { font-size: 11px; font-style: italic; }
+  .plinks { font-size: 10px; margin-top: 4px; }
+  .plinks a { text-decoration: none; margin-right: 10px; }
+  .desc { font-size: 11px; line-height: 1.5; margin: 7px 0 0; }
+</style>
+
+<div class="intro">
+  <h1>Color options</h1>
+  <p>The same slice of your site — sidebar, publication tabs, and one paper card — rendered in each palette. Tell me the name of the one you want (or mix elements) and I'll apply it to the whole site.</p>
+</div>
+
+<div id="root"></div>
+
+<script>
+const PALETTES = [
+  { key:"Berkeley", note:"Berkeley Blue headings + California Gold accent — personal to you, distinctive.",
+    bg:"#ffffff", pageText:"#333", heading:"#003262", muted:"#8a8f94", link:"#1c6ab5",
+    tabBg:"#eef1f4", tabText:"#003262", tabActiveBg:"#003262", tabActiveText:"#ffffff",
+    badgeBg:"#FDB515", badgeText:"#4a3400", thumbBg:"#eef1f4", thumbText:"#003262", demoBg:"#ffffff" },
+  { key:"Refined slate + teal", note:"Calm slate text, considered deep-teal accent, warm off-white background.",
+    bg:"#faf9f7", pageText:"#3f4653", heading:"#3f4653", muted:"#9a9ea1", link:"#0f766e",
+    tabBg:"#eceae6", tabText:"#3f4653", tabActiveBg:"#0f766e", tabActiveText:"#ffffff",
+    badgeBg:"#f0c675", badgeText:"#5a4300", thumbBg:"#eceae6", thumbText:"#0f766e", demoBg:"#faf9f7" },
+  { key:"Deep navy + clean", note:"Near-navy headings, one crisp blue accent, lots of whitespace.",
+    bg:"#ffffff", pageText:"#2a2f3a", heading:"#1a2233", muted:"#9098a4", link:"#2b6cb0",
+    tabBg:"#eef1f5", tabText:"#1a2233", tabActiveBg:"#2b6cb0", tabActiveText:"#ffffff",
+    badgeBg:"#DAE6FA", badgeText:"#1a3a5a", thumbBg:"#eef1f5", thumbText:"#2b6cb0", demoBg:"#ffffff" },
+  { key:"Keep current", note:"The existing slate-gray + light-blue palette (Michelle's).",
+    bg:"#ffffff", pageText:"#4F5357", heading:"#4F5357", muted:"#9a9ea1", link:"#75a0ea",
+    tabBg:"#f3f3f1", tabText:"#4F5357", tabActiveBg:"#4F5357", tabActiveText:"#ffffff",
+    badgeBg:"#eee09e", badgeText:"#4F5357", thumbBg:"#f0f0ee", thumbText:"#4F5357", demoBg:"#ffffff" },
+];
+const TABS = ["All","AI Safety","LLM Capabilities","Social Science","RL"];
+
+document.getElementById("root").innerHTML = PALETTES.map(p => `
+  <div class="opt" style="background:${p.bg}">
+    <div class="opt-label" style="color:${p.heading}">${p.key}</div>
+    <div class="opt-note">${p.note}</div>
+    <div class="demo" style="background:${p.demoBg};color:${p.pageText};box-shadow:0 0 0 1px #eee">
+      <div class="side">
+        <div class="name" style="color:${p.heading}">MARWA ABDULHAI</div>
+        <div class="email" style="color:${p.muted}">marwa_abdulhai@berkeley.edu</div>
+        <div class="lnk"><a style="color:${p.link}">Google Scholar</a></div>
+        <div class="lnk"><a style="color:${p.link}">GitHub</a></div>
+        <div class="lnk"><a style="color:${p.link}">Twitter / X</a></div>
+      </div>
+      <div>
+        <div class="tabs">
+          ${TABS.map((t,i)=>`<button class="tab" style="${i===1
+            ? `background:${p.tabActiveBg};color:${p.tabActiveText}`
+            : `background:${p.tabBg};color:${p.tabText}`}">${t}</button>`).join("")}
+        </div>
+        <div class="card">
+          <div class="thumb" style="background:${p.thumbBg};color:${p.thumbText}">figure</div>
+          <div>
+            <span class="ttl" style="color:${p.heading}">Deception in Dialogue: Evaluating &amp; Mitigating Deceptive Behavior in LLMs</span><span class="badge" style="background:${p.badgeBg};color:${p.badgeText}">Best Paper</span>
+            <div class="auth" style="color:${p.pageText}"><u>Marwa Abdulhai</u>, <a style="color:${p.link}">Ryan Cheng</a>, <a style="color:${p.link}">Natasha Jaques</a>, <a style="color:${p.link}">Sergey Levine</a></div>
+            <div class="ven" style="color:${p.muted}">Preprint</div>
+            <div class="plinks"><a style="color:${p.link}">Paper</a><a style="color:${p.link}">Code</a><a style="color:${p.link}">Website</a></div>
+            <p class="desc" style="color:${p.pageText}">We benchmark 8 LLMs on 4 dialogue tasks and introduce a multi-turn RL method that reduces deceptive behavior by 77.6% compared to instruction-tuned models.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+`).join("");
+</script>
