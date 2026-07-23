@@ -85,9 +85,9 @@ a, a:hover, a:active, a:visited, a:focus {
 
 /* SIDEBAR NAV ---------------------------------------------- */
 .main {
-    margin-left: 22%;
-    padding: 0px 60px 60px 25px;
-    max-width: 1180px;
+    margin-left: 250px;
+    padding: 0px 55px 60px 20px;
+    max-width: 1120px;
 }
 
 .nav {
@@ -95,31 +95,30 @@ a, a:hover, a:active, a:visited, a:focus {
     height: 100%;
     top: 0px;
     left: 0px;
-    width: 22%;
-    max-width: 300px;
-    padding: 0 20px;
+    width: 250px;
+    padding: 0 18px;
     overflow-y: auto;
 }
 
 .nav-img img {
     position: relative;
     width: 100%;
-    max-width: 210px;
+    max-width: 195px;
     border-radius: 50%;
     top: 40px;
     margin-top: 28px;
-    margin-left: 8%;
+    margin-left: 0;
 }
 
 .nav-text-top {
     position: relative;
-    left: 8%;
+    left: 2%;
     top: 40px;
 }
 
 .nav-text-top .md-txt {
-    font-size: 22pt;
-    line-height: 27pt;
+    font-size: 18pt;
+    line-height: 23pt;
     font-weight: 600;
 }
 .nav-text-top .md-txt a,
@@ -135,7 +134,7 @@ a, a:hover, a:active, a:visited, a:focus {
 
 .nav-text-bottom {
     position: relative;
-    left: 8%;
+    left: 2%;
     top: 90px;
 }
 
@@ -147,8 +146,8 @@ a, a:hover, a:active, a:visited, a:focus {
 /* CONTENT GRID: bio (top-left) + main flow (below bio) + news rail (right) */
 .content-grid {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) 290px;
-    column-gap: 46px;
+    grid-template-columns: minmax(0, 1fr) 330px;
+    column-gap: 42px;
     align-items: start;
 }
 .gc-bio  { grid-column: 1; grid-row: 1; padding-top: 44px; }
@@ -299,7 +298,8 @@ a, a:hover, a:active, a:visited, a:focus {
 
 .pub-desc {
     margin-top: 8px;
-    line-height: 15pt;
+    font-size: 10.5pt;
+    line-height: 15.5pt;
     color: #5f6367;
 }
 
