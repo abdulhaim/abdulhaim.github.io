@@ -41,8 +41,8 @@ a, a:hover, a:active, a:visited, a:focus {
     font-family: Inter, "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #4F5357;
     letter-spacing: 0.4pt;
-    font-size: 11.5pt;
-    line-height: 18.5pt;
+    font-size: 10.5pt;
+    line-height: 16.5pt;
 }
 
 .sm-txt-caps {
@@ -59,24 +59,24 @@ a, a:hover, a:active, a:visited, a:focus {
     font-family: Inter, "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #4F5357;
     letter-spacing: 0.4pt;
-    font-size: 11.5pt;
-    line-height: 16.5pt;
+    font-size: 10.5pt;
+    line-height: 15pt;
 }
 
 .xs-txt {
     font-family: Inter, "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #4F5357;
     letter-spacing: 0.4pt;
-    font-size: 10.5pt;
-    line-height: 15pt;
+    font-size: 9.5pt;
+    line-height: 13.5pt;
 }
 
 .xs-txt-nav {
     font-family: Inter, "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #4F5357;
     letter-spacing: 0.4pt;
-    font-size: 10.5pt;
-    line-height: 22pt;
+    font-size: 10pt;
+    line-height: 20pt;
 }
 
 .summary-par {
@@ -85,9 +85,9 @@ a, a:hover, a:active, a:visited, a:focus {
 
 /* SIDEBAR NAV ---------------------------------------------- */
 .main {
-    margin-left: 250px;
-    padding: 0px 55px 60px 20px;
-    max-width: 1340px;
+    margin-left: 268px;
+    padding: 0px 78px 64px 24px;
+    max-width: 1360px;
 }
 
 .nav {
@@ -95,8 +95,8 @@ a, a:hover, a:active, a:visited, a:focus {
     height: 100%;
     top: 0px;
     left: 0px;
-    width: 250px;
-    padding: 0 16px 0 34px;
+    width: 268px;
+    padding: 0 16px 0 50px;
     overflow-y: auto;
 }
 
@@ -117,8 +117,8 @@ a, a:hover, a:active, a:visited, a:focus {
 }
 
 .nav-text-top .md-txt {
-    font-size: 18pt;
-    line-height: 23pt;
+    font-size: 16pt;
+    line-height: 21pt;
     font-weight: 600;
 }
 .nav-text-top .md-txt a,
@@ -169,8 +169,11 @@ a, a:hover, a:active, a:visited, a:focus {
 #teaching-section {
     border-top: #ddd 1px solid;
 }
-#pubs-section {
-    padding-top: 34px;
+#selected-section {
+    padding-top: 24px;
+}
+#allpubs-section {
+    padding-top: 4px;
 }
 
 /* Publication area tabs */
@@ -199,10 +202,10 @@ a, a:hover, a:active, a:visited, a:focus {
 }
 
 .section-title {
-    margin-bottom: 28px;
+    margin-bottom: 26px;
     color: #26323d;
     font-family: Inter, "Helvetica Neue", Arial, sans-serif;
-    font-size: 16pt;
+    font-size: 14pt;
     font-weight: 600;
     text-transform: none;
     letter-spacing: 0.2px;
@@ -211,7 +214,7 @@ a, a:hover, a:active, a:visited, a:focus {
     font-family: Inter, "Helvetica Neue", Arial, sans-serif !important;
     text-transform: none !important;
     letter-spacing: 0.2px !important;
-    font-size: 12.5pt;
+    font-size: 11.5pt;
     font-weight: 600;
     color: #26323d;
 }
@@ -298,8 +301,8 @@ a, a:hover, a:active, a:visited, a:focus {
 
 .pub-desc {
     margin-top: 8px;
-    font-size: 10.5pt;
-    line-height: 15.5pt;
+    font-size: 9.5pt;
+    line-height: 14pt;
     color: #5f6367;
 }
 
@@ -310,8 +313,8 @@ a, a:hover, a:active, a:visited, a:focus {
 .pub-title {
     font-weight: 600;
     color: #2f3b44;
-    font-size: 13.5pt;
-    line-height: 18pt;
+    font-size: 12pt;
+    line-height: 16pt;
 }
 
 .pub-authors {
@@ -326,6 +329,12 @@ a, a:hover, a:active, a:visited, a:focus {
     text-decoration: none;
 }
 
+.pub-venues {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 6px;
+}
 .pub-venue {
     display: inline-block;
     font-style: normal;
@@ -334,7 +343,6 @@ a, a:hover, a:active, a:visited, a:focus {
     background: #eef0f2;
     padding: 2px 9px;
     border-radius: 5px;
-    margin-top: 6px;
 }
 .pub-venue a { color: #566169; font-weight: inherit; }
 .pub-venue a:hover { text-decoration: underline; }

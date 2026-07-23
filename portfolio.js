@@ -79,8 +79,8 @@ const SUMMARY = `
 <div class="summary-par sm-txt">
 I'm a Ph.D. candidate at University of California, Berkeley in the
 <a href="https://bair.berkeley.edu/" target="_blank">Berkeley Artificial Intelligence Research (BAIR)</a> lab,
-advised by <a href="https://people.eecs.berkeley.edu/~svlevine/" target="_blank">Sergey Levine</a>, with
-<a href="https://natashajaques.ai/" target="_blank">Natasha Jaques</a> as a close research advisor.
+advised by Professor <a href="https://people.eecs.berkeley.edu/~svlevine/" target="_blank">Sergey Levine</a>, with
+Professor <a href="https://natashajaques.ai/" target="_blank">Natasha Jaques</a> (University of Washington) as a close research advisor.
 Previously, I did my masters and undergraduate studies at MIT, where I worked with
 <a href="https://www.mit.edu/~jhow/" target="_blank">Jonathan P. How</a>.
 </div>
@@ -475,7 +475,7 @@ function pubCard(p) {
       <div class="pub-body xs-sm-txt">
         <span class="pub-title">${p.title}</span>${awards}
         <span class="pub-authors">${authorsHTML(p.authors)}</span>
-        <span class="pub-venue">${p.venue}</span>
+        <div class="pub-venues">${p.venue.split(";").map(v => `<span class="pub-venue">${v.trim()}</span>`).join("")}</div>
         ${linksHTML(p.links)}
         ${desc}
       </div>
