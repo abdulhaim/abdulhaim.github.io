@@ -489,8 +489,17 @@ a, a:hover, a:active, a:visited, a:focus {
 /* PAGE NAV (sidebar) --------------------------------------- */
 .nav-pages {
     margin-top: 18px;
-    padding-top: 14px;
-    border-top: #ececec 1px solid;
+    padding-top: 16px;
+    position: relative;
+}
+.nav-pages::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 1px;
+    background: #d5d7db;
 }
 .nav-pages a {
     color: #6b7075 !important;
